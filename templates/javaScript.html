@@ -33,14 +33,14 @@
 <div id="output"></div>
 <script>
     function saveInput() {
-        var userInput = document.getElementById('userInput').value;
+        const userInput = document.getElementById('userInput').value;
         localStorage.setItem('userInput', userInput);
         displayInput();
     }
 
     function displayInput() {
-        var savedInput = localStorage.getItem('userInput');
-        var outputDiv = document.getElementById('output');
+        const savedInput = localStorage.getItem('userInput');
+        const outputDiv = document.getElementById('output');
         outputDiv.innerHTML = savedInput;
     }
 
