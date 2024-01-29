@@ -31,22 +31,7 @@
 <input type="text" id="userInput" placeholder="Enter your input">
 <button onclick="saveInput()">Save</button>
 <div id="output"></div>
-<script>
-    function saveInput() {
-        const userInput = document.getElementById('userInput').value;
-        localStorage.setItem('userInput', userInput);
-        displayInput();
-    }
 
-    function displayInput() {
-        const savedInput = localStorage.getItem('userInput');
-        const outputDiv = document.getElementById('output');
-        outputDiv.innerHTML = savedInput;
-    }
-
-    // Call displayInput() on page load to show any previously saved input
-    displayInput();
-</script>
 <hr><hr>
 <script src="/static/script.js"></script>
 </body>
