@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>python</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div>
+    <a href="/">Home</a> &nbsp
+    <a href="/python">python</a> &nbsp
+    <a href="/javaScript">javaScript</a> &nbsp
+</div>
+    <h1>Python </h1>
+    <h4>Tutorial No.1</h4>
+    <h4><small>Calculate your age </small></h4>
+   <p>Create a Flask route that handles both GET and POST requests. In the GET request, render the form template, and in the POST request, calculate the age based on the user's input. </p>
+   <br>
+    <img src="{{ url_for('static', filename='python1.png') }}" alt="python Tutorial">
+  
+   
+    <h4><small> Result </small></h4>
+   
+      <form method="post" action="/">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="birth_year">Birth Year:</label>
+        <input type="number" id="birth_year" name="birth_year" required><br><br>
+        <input type="submit" value="Calculate Age">
+      </form>
+      <hr>
+   
+
+<script src="/static/script.js"></script>
+</body>
+</html>

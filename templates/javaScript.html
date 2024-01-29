@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>javaScript</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div>
+    <a href="/">Home</a> &nbsp
+    <a href="/python">python</a> &nbsp
+    <a href="/javaScript">javaScript</a> &nbsp
+</div>
+    <h1>JavaScript </h1>
+    <h4>Tutorial No.1</h4>
+    <h4><small>Age to Seconds Converter  </small></h4>
+    <img src="{{ url_for('static', filename='js1.png') }}" alt="javaScript Tutorial">
+   
+  
+<h4> <small>Result</small></h4>
+<label for="dob">Enter your date of birth:</label>
+<input type="date" id="dob">
+<button onclick="calculateAge()">Calculate</button>
+<p id="result"></p>
+<hr><hr>
+<h4>Tutorial No.2</h4>
+<h4><small>Save user input to the localStorage</small></h4>
+<img src="{{ url_for('static', filename='js2.png') }}" alt="javaScript Tutorial"> <br> <br>
+<h4> <small>Result</small></h4>
+
+<input type="text" id="userInput" placeholder="Enter your input">
+<button onclick="saveInput()">Save</button>
+<div id="output"></div>
+<script>
+    function saveInput() {
+        var userInput = document.getElementById('userInput').value;
+        localStorage.setItem('userInput', userInput);
+        displayInput();
+    }
+
+    function displayInput() {
+        var savedInput = localStorage.getItem('userInput');
+        var outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = savedInput;
+    }
+
+    // Call displayInput() on page load to show any previously saved input
+    displayInput();
+</script>
+<hr><hr>
+<script src="/static/script.js"></script>
+</body>
+</html>
